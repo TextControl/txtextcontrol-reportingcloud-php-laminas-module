@@ -4,6 +4,8 @@
 
 ## dev-master
 
+## 2.2.0 - 2020-01-03
+
 * Rewrote as Laminas Project package.
 
 ## 2.1.0 - 2019-12-18
