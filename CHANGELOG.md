@@ -2,6 +2,10 @@
 
 # CHANGELOG
 
+## dev-master
+
+* Rewrote as Laminas Project package.
+
 ## 2.1.0 - 2019-12-18
 
 * Added support for PHP 7.4.
@@ -42,7 +46,7 @@
 
 ## 0.0.5 - 2017-06-19
 
-* Renamed project `txtextcontrol-reportingcloud-zf3-module` to `txtextcontrol-reportingcloud-zf-module`
+* Renamed project `txtextcontrol-reportingcloud-laminas-module` to `txtextcontrol-reportingcloud-zf-module`
 
 ## 0.0.4 - 2017-06-17
 
@@ -58,4 +62,4 @@
 
 ## 0.0.1 - 2017-06-16
 
-* Added minimum code to use ReportingCloud as a Zend Framework 3 module.
+* Added minimum code to use ReportingCloud as a Laminas module.

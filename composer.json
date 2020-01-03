@@ -1,13 +1,12 @@
 {
-    "name": "textcontrol/txtextcontrol-reportingcloud-zf-module",
-    "description": "Zend Framework 3 Module for ReportingCloud Web API. Authored and supported by Text Control GmbH.",
+    "name": "textcontrol/txtextcontrol-reportingcloud-laminas-module",
+    "description": "Laminas Module (formerly Zend Framework 3 Module) for ReportingCloud Web API. Authored and supported by Text Control GmbH.",
     "license": "BSD-3-Clause",
     "type": "library",
     "keywords": [
         "reporting cloud",
         "reportingcloud",
-        "zend framework 3",
-        "zf3",
+        "lamina",
         "module"
     ],
     "autoload": {
@@ -24,9 +23,9 @@
         "php": "^7.1",
         "container-interop/container-interop": "^1.0",
         "textcontrol/txtextcontrol-reportingcloud": "^2.0",
-        "zendframework/zend-view": "^2.11",
-        "zendframework/zend-mvc": "^3.1",
-        "zendframework/zend-servicemanager": "^3.1"
+        "laminas/laminas-view": "^2.11",
+        "laminas/laminas-mvc": "^3.1",
+        "laminas/laminas-servicemanager": "^3.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.0 || ^8.0",

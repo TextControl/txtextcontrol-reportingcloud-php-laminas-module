@@ -1,27 +1,27 @@
 ![Logo](./resource/rc_logo_512.png)
 
-# ReportingCloud Zend Framework 3 Module
+# ReportingCloud Laminas Module
 
-[![Build Status](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-zf-module/badges/build.png?b=master)](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-zf-module/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-zf-module/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-zf-module/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/textcontrol/txtextcontrol-reportingcloud-zf-module/v/stable)](https://packagist.org/packages/textcontrol/txtextcontrol-reportingcloud-zf-module)
-[![composer.lock available](https://poser.pugx.org/textcontrol/txtextcontrol-reportingcloud-zf-module/composerlock)](https://packagist.org/packages/textcontrol/txtextcontrol-reportingcloud-zf-module)
+[![Build Status](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-laminas-module/badges/build.png?b=master)](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-laminas-module/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-laminas-module/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-laminas-module/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/textcontrol/txtextcontrol-reportingcloud-laminas-module/v/stable)](https://packagist.org/packages/textcontrol/txtextcontrol-reportingcloud-laminas-module)
+[![composer.lock available](https://poser.pugx.org/textcontrol/txtextcontrol-reportingcloud-laminas-module/composerlock)](https://packagist.org/packages/textcontrol/txtextcontrol-reportingcloud-laminas-module)
 
 
 ## Install Using Composer
 
-Install the ReportingCloud Zend Framework 3 module in your project is using [Composer](http://getcomposer.org):
+Install the ReportingCloud Laminas module in your project is using [Composer](http://getcomposer.org):
 
 ```bash
-composer require textcontrol/txtextcontrol-reportingcloud-zf-module:^2.0
+composer require textcontrol/txtextcontrol-reportingcloud-laminas-module:^2.0
 ```
 
 After installing, you need to copy the configuration file:
 
 ```bash
-/vendor/textcontrol/txtextcontrol-reportingcloud-zf-module/config/reportingcloud.local.php.dist
+/vendor/textcontrol/txtextcontrol-reportingcloud-laminas-module/config/reportingcloud.local.php.dist
 ```
-to your Zend Framework 3 application: 
+to your Laminas application: 
 
 ```bash
 /config/autoload/reportingcloud.local.php
@@ -68,18 +68,18 @@ Your `/config/modules.config.php` file should look something like this:
 
 ```php
 return [
-    'Zend\Router',
-    'Zend\Validator',
+    'Laminas\Router',
+    'Laminas\Validator',
     'TxTextControl\ReportingCloud',
     'Application',
 ];
 ```
 
-You are now ready to use Reporting Cloud in your Zend Framework 3 application.
+You are now ready to use Reporting Cloud in your Laminas application.
 
-## Usage in Zend Framework 3
+## Usage in Laminas
 
-The ReportingCloud Zend Framework 3 module registers a Service in the Service Manager under the key `ReportingCloud`.
+The ReportingCloud Laminas module registers a Service in the Service Manager under the key `ReportingCloud`.
 
 It is therefore available in Factories as follows:
 
@@ -117,4 +117,4 @@ $this->reportingCloud();    // returns a \TxTextControl\ReportingCloud\Reporting
 
  ## Getting Support
  
- The official Zend Framework 3 module for ReportingCloud Web API is supported by Text Control GmbH. To start a conversation with the PHP people in the ReportingCloud Support Department, please [create a ticket](https://support.textcontrol.com/new-ticket), selecting _ReportingCloud_ from the department selection list.
+ The official Laminas module for ReportingCloud Web API is supported by Text Control GmbH. To start a conversation with the PHP people in the ReportingCloud Support Department, please [create a ticket](https://support.textcontrol.com/new-ticket), selecting _ReportingCloud_ from the department selection list.

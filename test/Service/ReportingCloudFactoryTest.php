@@ -8,8 +8,8 @@ use TxTextControl\ReportingCloud\Exception\InvalidArgumentException;
 use TxTextControl\ReportingCloud\ReportingCloud;
 use TxTextControl\ReportingCloud\Service\ReportingCloudFactory;
 use TxTextControlTest\ReportingCloud\ServiceManagerFactory;
-use Zend\ServiceManager\Exception\ServiceNotFoundException;
-use Zend\ServiceManager\ServiceManager;
+use Laminas\ServiceManager\Exception\ServiceNotFoundException;
+use Laminas\ServiceManager\ServiceManager;
 
 class ReportingCloudFactoryTest extends TestCase
 {

@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 /**
- * ReportingCloud Zend Framework 3 Module
+ * ReportingCloud Laminas Module
  *
- * Zend Framework 3 Module for ReportingCloud Web API. Authored and supported by Text Control GmbH.
+ * Laminas Module for ReportingCloud Web API. Authored and supported by Text Control GmbH.
  *
  * @link      https://www.reporting.cloud to learn more about ReportingCloud
- * @link      https://git.io/Je5US for the canonical source repository
- * @license   https://github.com/TextControl/txtextcontrol-reportingcloud-php-zf-module/blob/master/LICENSE.md
+ * @link      https://git.io/JexF4 for the canonical source repository
+ * @license   https://git.io/JexFB
  * @copyright © 2020 Text Control GmbH
  */
 
@@ -17,7 +17,7 @@ namespace TxTextControl\ReportingCloud\Service;
 use Interop\Container\ContainerInterface;
 use TxTextControl\ReportingCloud\Exception\InvalidArgumentException;
 use TxTextControl\ReportingCloud\ReportingCloud;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 /**
  * Class ReportingCloudFactory
@@ -54,10 +54,10 @@ class ReportingCloudFactory implements FactoryInterface
     {
         $ret = null;
 
-        $source = '/vendor/textcontrol/txtextcontrol-reportingcloud-zf3-module/config/reportingcloud.local.php.dist';
+        $source = '/vendor/textcontrol/txtextcontrol-reportingcloud-laminas-module/config/reportingcloud.local.php.dist';
         $dest   = '/config/autoload/reportingcloud.local.php';
 
-        $help = "Copy '{$source}' to '{$dest}' in your Zend Framework 3 application, ";
+        $help = "Copy '{$source}' to '{$dest}' in your Laminas application, ";
         $help .= "then add your ReportingCloud credentials to that file.";
 
         if (!array_key_exists('reportingcloud', $config)) {
