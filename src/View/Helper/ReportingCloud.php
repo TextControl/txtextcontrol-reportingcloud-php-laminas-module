@@ -14,8 +14,8 @@ declare(strict_types=1);
 
 namespace TxTextControl\ReportingCloud\View\Helper;
 
-use TxTextControl\ReportingCloud\ReportingCloud as TxTextControlReportingCloudReportingCloud;
 use Laminas\View\Helper\AbstractHelper;
+use TxTextControl\ReportingCloud\ReportingCloud as TxTextControlReportingCloudReportingCloud;
 
 /**
  * Class ReportingCloud

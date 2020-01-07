@@ -4,6 +4,10 @@
 
 ## dev-master
 
+## 2.2.1 - 2020-01-07
+
+* Improved documentation for Laminas migration. 
+
 ## 2.2.0 - 2020-01-03
 
 * Rewrote as Laminas Project package.

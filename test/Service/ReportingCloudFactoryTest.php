@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 namespace TxTextControlTest\ReportingCloud\Service;
 
+use Laminas\ServiceManager\Exception\ServiceNotFoundException;
+use Laminas\ServiceManager\ServiceManager;
 use PHPUnit\Framework\TestCase;
 use TxTextControl\ReportingCloud\Exception\InvalidArgumentException;
 use TxTextControl\ReportingCloud\ReportingCloud;
 use TxTextControl\ReportingCloud\Service\ReportingCloudFactory;
 use TxTextControlTest\ReportingCloud\ServiceManagerFactory;
-use Laminas\ServiceManager\Exception\ServiceNotFoundException;
-use Laminas\ServiceManager\ServiceManager;
 
 class ReportingCloudFactoryTest extends TestCase
 {

@@ -15,9 +15,9 @@ declare(strict_types=1);
 namespace TxTextControl\ReportingCloud\Service;
 
 use Interop\Container\ContainerInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use TxTextControl\ReportingCloud\Exception\InvalidArgumentException;
 use TxTextControl\ReportingCloud\ReportingCloud;
-use Laminas\ServiceManager\Factory\FactoryInterface;
 
 /**
  * Class ReportingCloudFactory

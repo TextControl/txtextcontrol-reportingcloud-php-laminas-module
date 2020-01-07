@@ -14,8 +14,8 @@ declare(strict_types=1);
 
 namespace TxTextControl\ReportingCloud\Mvc\Controller\Plugin;
 
-use TxTextControl\ReportingCloud\ReportingCloud as TxTextControlReportingCloudReportingCloud;
 use Laminas\Mvc\Controller\Plugin\AbstractPlugin;
+use TxTextControl\ReportingCloud\ReportingCloud as TxTextControlReportingCloudReportingCloud;
 
 /**
  * Class ReportingCloud
