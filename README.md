@@ -85,7 +85,7 @@ It is therefore available in Factories as follows:
 
 ```php
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class Factory implements FactoryInterface
 {
