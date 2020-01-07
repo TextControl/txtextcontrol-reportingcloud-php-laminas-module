@@ -115,6 +115,10 @@ For easy access in Views, the following View helper is available:
 $this->reportingCloud();    // returns a \TxTextControl\ReportingCloud\ReportingCloud instance
 ```
 
+### Migration from Zend Framework 3 to Laminas
+
+Please refer to [What Happened to the Zend Framework 3 Module for ReportingCloud Web API?](./doc/zend-framework.md), if you are migrating from Zend Framework 3 to Laminas.
+
  ## Getting Support
  
  The official Laminas module for ReportingCloud Web API is supported by Text Control GmbH. To start a conversation with the PHP people in the ReportingCloud Support Department, please [create a ticket](https://support.textcontrol.com/new-ticket), selecting _ReportingCloud_ from the department selection list.
