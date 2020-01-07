@@ -4,7 +4,7 @@
 
 In April 2019, Matthew Weier O'Phinney [announced](https://framework.zend.com/blog/2019-04-17-announcing-laminas.html) that the [Zend Framework](https://framework.zend.com/) will transition to the Linux Foundation under the new name of [The Laminas Project](https://getlaminas.org/).
 
-At the end of December 2019, the first Laminas code was [released](https://github.com/laminas), and all Zend Framework packages were marked as abandoned.
+At the end of December 2019, The Laminas Project [released](https://github.com/laminas) an initial set of repositories, and all Zend Framework packages were marked as abandoned.
 
 Following this trend, the package `textcontrol/txtextcontrol-reportingcloud-zf-module` was also marked as abandoned and a new package `textcontrol/txtextcontrol-reportingcloud-laminas-module` was released containing the migrated code.
 
