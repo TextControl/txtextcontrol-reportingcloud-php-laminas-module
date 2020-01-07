@@ -6,7 +6,7 @@
 
 ## 2.2.1 - 2020-01-07
 
-* Improved documentation for Laminas migration. 
+* Improved documentation for [Laminas](https://getlaminas.org/) migration.
 
 ## 2.2.0 - 2020-01-03
 
