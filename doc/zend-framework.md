@@ -6,7 +6,7 @@ In April 2019, Matthew Weier O'Phinney [announced](https://framework.zend.com/bl
 
 At the end of December 2019, The Laminas Project [released](https://github.com/laminas) an initial set of repositories, and all Zend Framework packages were marked as abandoned.
 
-Following this trend, the package `textcontrol/txtextcontrol-reportingcloud-zf-module` was also marked as abandoned and a new package `textcontrol/txtextcontrol-reportingcloud-laminas-module` was released containing the migrated code.
+Following this trend, the package [`textcontrol/txtextcontrol-reportingcloud-zf-module`](https://packagist.org/packages/textcontrol/txtextcontrol-reportingcloud-zf-module) was also marked as abandoned and a new package [`textcontrol/txtextcontrol-reportingcloud-laminas-module`](https://packagist.org/packages/textcontrol/txtextcontrol-reportingcloud-laminas-module) was released containing the migrated code.
 
 Since the [migration](https://github.com/laminas/laminas-migration) from Zend Framework 3 to Laminas involves mainly a namespace change (`\Zend` to `\Laminas`), migrating the Zend Framework 3 Module for ReportingCloud Web API is simply a matter of replacing the old package with the new one.
 
