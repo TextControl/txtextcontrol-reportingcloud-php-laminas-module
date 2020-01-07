@@ -27,7 +27,7 @@ class Module
      *
      * @return array
      */
-    public function getConfig()
+    public function getConfig(): array
     {
         $filename = dirname(__FILE__, 2) . '/config/module.config.php';
 

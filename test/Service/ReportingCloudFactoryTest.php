@@ -101,7 +101,7 @@ class ReportingCloudFactoryTest extends TestCase
             ]);
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
-            $needle = "Neither the key 'api_key', nor the keys 'username' and 'password' have been specified";
+            $needle = "Either the key 'api_key', or the keys 'username' and 'password' have not been specified";
             $this->assertStringContainsString($needle, $e->getMessage());
         }
     }
@@ -119,7 +119,7 @@ class ReportingCloudFactoryTest extends TestCase
             ]);
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
-            $needle = "Neither the key 'api_key', nor the keys 'username' and 'password' have been specified";
+            $needle = "Either the key 'api_key', or the keys 'username' and 'password' have not been specified";
             $this->assertStringContainsString($needle, $e->getMessage());
         }
     }
@@ -137,7 +137,7 @@ class ReportingCloudFactoryTest extends TestCase
             ]);
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
-            $needle = "Neither the key 'api_key', nor the keys 'username' and 'password' have been specified";
+            $needle = "Either the key 'api_key', or the keys 'username' and 'password' have not been specified";
             $this->assertStringContainsString($needle, $e->getMessage());
         }
     }
