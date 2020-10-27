@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 use TxTextControl\ReportingCloud\ReportingCloud as ReportingCloudReportingCloud;
 use TxTextControl\ReportingCloud\View\Helper\ReportingCloud as ReportingCloudViewHelper;
 
-class ReportingCloud extends TestCase
+class ReportingCloudTest extends TestCase
 {
     public function testInvocationReturnsReportingCloudInstance(): void
     {
