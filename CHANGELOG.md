@@ -2,7 +2,10 @@
 
 # CHANGELOG
 
-## dev-master
+## 2.2.2 - 2020-10-28
+
+* Improved [Composer 2.0](https://blog.packagist.com/composer-2-0-is-now-available/) compatibility.
+* Fixed PSR-4 autoloading issue in tests.
 
 ## 2.2.1 - 2020-01-07
 
