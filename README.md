@@ -13,7 +13,7 @@
 Install the ReportingCloud Laminas module in your project is using [Composer](http://getcomposer.org):
 
 ```bash
-composer require textcontrol/txtextcontrol-reportingcloud-laminas-module:^2.2
+composer require textcontrol/txtextcontrol-reportingcloud-laminas-module:^3.0
 ```
 
 After installing, you need to copy the configuration file:
