@@ -29,28 +29,13 @@ to your Laminas application:
 
 Note: The `.dist` prefix has been removed.
 
-Then, add your ReportingCloud credentials to the configuration file.
-
-Do this using either an API key:
+Then, add your ReportingCloud credentials to the configuration file:
 
 ```php
 return [
     'reportingcloud' => [
         'credentials' => [
             'api_key' => 'your-api-key',
-        ],
-    ],
-];
-```
-
-Or your username and password:
-
-```php
-return [
-    'reportingcloud' => [
-        'credentials' => [
-            'username' => 'your-username',
-            'password' => 'your-password',
         ],
     ],
 ];
