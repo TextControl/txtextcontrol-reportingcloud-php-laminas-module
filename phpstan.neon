@@ -1,0 +1,11 @@
+parameters:
+    level: max
+    scanFiles:
+        -  %currentWorkingDirectory%/vendor/autoload.php
+    paths:
+        - config
+        - src
+        - test
+    fileExtensions:
+        - php
+

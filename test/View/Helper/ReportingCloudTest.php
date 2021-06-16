@@ -15,6 +15,6 @@ class ReportingCloudTest extends TestCase
 
         $viewHelper = new ReportingCloudViewHelper($reportingCloud);
 
-        $this->assertSame($reportingCloud, $viewHelper());
+        self::assertSame($reportingCloud, $viewHelper());
     }
 }

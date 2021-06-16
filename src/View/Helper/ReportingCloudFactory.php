@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @link      https://www.reporting.cloud to learn more about ReportingCloud
  * @link      https://git.io/JexF4 for the canonical source repository
  * @license   https://git.io/JexFB
- * @copyright © 2020 Text Control GmbH
+ * @copyright © 2021 Text Control GmbH
  */
 
 namespace TxTextControl\ReportingCloud\View\Helper;
@@ -32,8 +32,13 @@ class ReportingCloudFactory implements FactoryInterface
      *
      * @return ReportingCloud
      */
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null): ReportingCloud
-    {
+    // @phpstan-ignore-next-line
+    public function __invoke(
+        ContainerInterface $container,
+        $requestedName,
+        ?array $options = null
+    ): ReportingCloud {
+
         $reportingCloud = $container->get('ReportingCloud');
 
         return new ReportingCloud($reportingCloud);

@@ -15,6 +15,6 @@ class ReportingCloudTest extends TestCase
 
         $controllerPlugin = new ReportingCloudControllerPlugin($reportingCloud);
 
-        $this->assertSame($reportingCloud, $controllerPlugin());
+        self::assertSame($reportingCloud, $controllerPlugin());
     }
 }

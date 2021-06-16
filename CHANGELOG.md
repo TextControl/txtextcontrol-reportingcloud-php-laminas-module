@@ -2,6 +2,12 @@
 
 # CHANGELOG
 
+## 3.0.0 - 2021-xx-xx
+
+* Added support for PHP 8.0.
+* Upgraded minimum PHP requirement to 7.4.
+* Upgraded to ReportingCloud PHP SDK 3.0.
+
 ## 2.2.2 - 2020-10-28
 
 * Improved [Composer 2.0](https://blog.packagist.com/composer-2-0-is-now-available/) compatibility.

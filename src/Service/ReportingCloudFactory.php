@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @link      https://www.reporting.cloud to learn more about ReportingCloud
  * @link      https://git.io/JexF4 for the canonical source repository
  * @license   https://git.io/JexFB
- * @copyright © 2020 Text Control GmbH
+ * @copyright © 2021 Text Control GmbH
  */
 
 namespace TxTextControl\ReportingCloud\Service;
@@ -34,8 +34,13 @@ class ReportingCloudFactory implements FactoryInterface
      *
      * @return ReportingCloud
      */
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null): ReportingCloud
-    {
+    // @phpstan-ignore-next-line
+    public function __invoke(
+        ContainerInterface $container,
+        $requestedName,
+        ?array $options = null
+    ): ReportingCloud{
+
         $config = $container->get('Config');
 
         $credentials = $this->getCredentials($config);
@@ -46,9 +51,9 @@ class ReportingCloudFactory implements FactoryInterface
     /**
      * Return required credentials to use the Reporting Cloud Web API
      *
-     * @param array $config
+     * @param array<string, array> $config
      *
-     * @return array
+     * @return array<string, string>
      */
     protected function getCredentials(array $config): array
     {
@@ -67,18 +72,24 @@ class ReportingCloudFactory implements FactoryInterface
 
         $credentials = $config['reportingcloud']['credentials'];
 
-        if (!empty($credentials['api_key'] ?? '')) {
-            return [
-                'api_key' => $credentials['api_key'],
-            ];
+        if (array_key_exists('api_key', $credentials)) {
+            $apiKey = $credentials['api_key'];
+            if (is_string($apiKey) && strlen($apiKey) > 0) {
+                return [
+                    'api_key' => $apiKey,
+                ];
+            }
         }
 
-        if (!empty($credentials['username'] ?? '') &&
-            !empty($credentials['password'] ?? '')) {
-            return [
-                'username' => $credentials['username'],
-                'password' => $credentials['password'],
-            ];
+        if (array_key_exists('username', $credentials) && array_key_exists('password', $credentials)) {
+            $username = $credentials['username'];
+            $password = $credentials['password'];
+            if (is_string($username) && strlen($username) > 0 && is_string($password) && strlen($password) > 0) {
+                return [
+                    'username' => $username,
+                    'password' => $password,
+                ];
+            }
         }
 
         $message = "Either the key 'api_key', or the keys 'username' and 'password' have not been specified under ";

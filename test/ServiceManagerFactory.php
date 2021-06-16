@@ -8,9 +8,14 @@ use Laminas\ServiceManager\ServiceManager;
 
 class ServiceManagerFactory
 {
-    public static function getServiceManager(array $applicationConfig = null): ServiceManager
+    /**
+     * @param array[] $applicationConfig
+     *
+     * @return ServiceManager
+     */
+    public static function getServiceManager(array $applicationConfig = []): ServiceManager
     {
-        $applicationConfig = $applicationConfig ?: static::getApplicationConfig();
+        $applicationConfig = count($applicationConfig) > 0 ? $applicationConfig : static::getApplicationConfig();
         $config            = self::getConfig();
 
         $serviceManagerConfigArray = [];
@@ -29,6 +34,9 @@ class ServiceManagerFactory
         return $serviceManager;
     }
 
+    /**
+     * @return array<string, array>
+     */
     public static function getApplicationConfig(): array
     {
         return [
@@ -36,15 +44,16 @@ class ServiceManagerFactory
                 'Laminas\Router',
                 'TxTextControl\ReportingCloud',
             ],
-
             'module_listener_options' => [
                 'config_glob_paths' => [],
                 'module_paths'      => [],
             ],
-
         ];
     }
 
+    /**
+     * @return array<string, array>
+     */
     public static function getConfig(): array
     {
         return [

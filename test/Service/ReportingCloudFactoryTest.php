@@ -13,7 +13,7 @@ use TxTextControlTest\ReportingCloud\ServiceManagerFactory;
 
 class ReportingCloudFactoryTest extends TestCase
 {
-    protected $factory;
+    protected ReportingCloudFactory $factory;
 
     public function testItInitializesReportingCloud(): void
     {
@@ -21,7 +21,7 @@ class ReportingCloudFactoryTest extends TestCase
 
         $reportingCloud = $this->factory->__invoke($container, '');
 
-        $this->assertInstanceOf(ReportingCloud::class, $reportingCloud);
+        self::assertInstanceOf(ReportingCloud::class, $reportingCloud);
     }
 
     public function testItInitializesReportingCloudUsingApiKey(): void
@@ -35,7 +35,7 @@ class ReportingCloudFactoryTest extends TestCase
             ],
         ]);
         $reportingCloud = $this->factory->__invoke($container, '');
-        $this->assertInstanceOf(ReportingCloud::class, $reportingCloud);
+        self::assertInstanceOf(ReportingCloud::class, $reportingCloud);
     }
 
     public function testItInitializesReportingCloudUsingUsernameAndPassword(): void
@@ -50,7 +50,7 @@ class ReportingCloudFactoryTest extends TestCase
             ],
         ]);
         $reportingCloud = $this->factory->__invoke($container, '');
-        $this->assertInstanceOf(ReportingCloud::class, $reportingCloud);
+        self::assertInstanceOf(ReportingCloud::class, $reportingCloud);
     }
 
     public function testItRaisesExceptionIfConfigNotInContainer(): void
@@ -59,7 +59,7 @@ class ReportingCloudFactoryTest extends TestCase
             $container = new ServiceManager();
             $this->factory->__invoke($container, '');
         } catch (ServiceNotFoundException $e) {
-            $this->assertStringContainsString('Unable to resolve service "Config" to a factory', $e->getMessage());
+            self::assertStringContainsString('Unable to resolve service "Config" to a factory', $e->getMessage());
         }
     }
 
@@ -71,7 +71,7 @@ class ReportingCloudFactoryTest extends TestCase
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
             $needle = "The key 'reportingcloud' has not been specified in your application's configuration file.";
-            $this->assertStringContainsString($needle, $e->getMessage());
+            self::assertStringContainsString($needle, $e->getMessage());
         }
     }
 
@@ -86,7 +86,7 @@ class ReportingCloudFactoryTest extends TestCase
         } catch (InvalidArgumentException $e) {
             $needle = "The key 'credentials' has not been specified under the key ";
             $needle .= "'reportingcloud' in your application's configuration file.";
-            $this->assertStringContainsString($needle, $e->getMessage());
+            self::assertStringContainsString($needle, $e->getMessage());
         }
     }
 
@@ -102,7 +102,7 @@ class ReportingCloudFactoryTest extends TestCase
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
             $needle = "Either the key 'api_key', or the keys 'username' and 'password' have not been specified";
-            $this->assertStringContainsString($needle, $e->getMessage());
+            self::assertStringContainsString($needle, $e->getMessage());
         }
     }
 
@@ -120,7 +120,7 @@ class ReportingCloudFactoryTest extends TestCase
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
             $needle = "Either the key 'api_key', or the keys 'username' and 'password' have not been specified";
-            $this->assertStringContainsString($needle, $e->getMessage());
+            self::assertStringContainsString($needle, $e->getMessage());
         }
     }
 
@@ -138,7 +138,7 @@ class ReportingCloudFactoryTest extends TestCase
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
             $needle = "Either the key 'api_key', or the keys 'username' and 'password' have not been specified";
-            $this->assertStringContainsString($needle, $e->getMessage());
+            self::assertStringContainsString($needle, $e->getMessage());
         }
     }
 
@@ -146,11 +146,16 @@ class ReportingCloudFactoryTest extends TestCase
     {
         $serviceManager = ServiceManagerFactory::getServiceManager();
 
-        $this->assertTrue($serviceManager->has('ReportingCloud'));
+        self::assertTrue($serviceManager->has('ReportingCloud'));
     }
 
     protected function setUp(): void
     {
         $this->factory = new ReportingCloudFactory();
+    }
+
+    protected function tearDown(): void
+    {
+        unset($this->factory);
     }
 }
