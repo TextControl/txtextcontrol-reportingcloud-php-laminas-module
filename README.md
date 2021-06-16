@@ -35,7 +35,7 @@ Then, add your ReportingCloud credentials to the configuration file:
 return [
     'reportingcloud' => [
         'credentials' => [
-            'api_key' => 'your-api-key',
+            'api_key' => 'your-api-key'
         ],
     ],
 ];
