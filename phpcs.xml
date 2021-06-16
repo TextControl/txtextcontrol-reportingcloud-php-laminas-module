@@ -9,6 +9,9 @@
     <arg name="colors"/>
     <arg value="sp"/>
 
+    <file>src</file>
+    <file>test</file>
+
     <rule ref="PSR2"/>
 
     <!-- this rule is not PSR-2 and degrades code legibility if enforced -->

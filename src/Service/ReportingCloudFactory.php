@@ -39,7 +39,7 @@ class ReportingCloudFactory implements FactoryInterface
         ContainerInterface $container,
         $requestedName,
         ?array $options = null
-    ): ReportingCloud{
+    ): ReportingCloud {
 
         $config = $container->get('Config');
 

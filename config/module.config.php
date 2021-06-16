@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @link      https://www.reporting.cloud to learn more about ReportingCloud
  * @link      https://git.io/JexF4 for the canonical source repository
  * @license   https://git.io/JexFB
- * @copyright © 2020 Text Control GmbH
+ * @copyright © 2021 Text Control GmbH
  */
 
 namespace TxTextControl\ReportingCloud;
