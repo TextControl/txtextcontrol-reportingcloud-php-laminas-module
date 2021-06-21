@@ -2,6 +2,10 @@
 
 # CHANGELOG
 
+## 3.0.1 - 2021-06-21
+
+* Minor update in `composer.json`.
+
 ## 3.0.0 - 2021-06-21
 
 * Added support for PHP 8.0.
