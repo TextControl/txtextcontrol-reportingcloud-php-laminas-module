@@ -2,7 +2,7 @@
 
 # CHANGELOG
 
-## 3.0.0 - 2021-xx-xx
+## 3.0.0 - 2021-06-21
 
 * Added support for PHP 8.0.
 * Upgraded minimum PHP requirement to 7.4.
