@@ -36,6 +36,11 @@
             "TxTextControlTest\\ReportingCloud\\": "test/"
         }
     },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
     "scripts": {
         "git-pre-commit": [
             "@phpcbf",
@@ -53,10 +58,5 @@
             "@phpstan"
         ],
         "test": "vendor/bin/phpunit"
-    },
-    "config": {
-        "allow-plugins": {
-            "phpstan/extension-installer": true
-        }
     }
 }
