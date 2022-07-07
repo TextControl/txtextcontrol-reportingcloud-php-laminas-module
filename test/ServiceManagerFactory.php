@@ -3,15 +3,18 @@ declare(strict_types=1);
 
 namespace TxTextControlTest\ReportingCloud;
 
+use Laminas\ModuleManager\ModuleManager;
 use Laminas\Mvc\Service\ServiceManagerConfig;
 use Laminas\ServiceManager\ServiceManager;
 
 class ServiceManagerFactory
 {
     /**
-     * @param array[] $applicationConfig
+     * @param array $applicationConfig
      *
      * @return ServiceManager
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
      */
     public static function getServiceManager(array $applicationConfig = []): ServiceManager
     {
@@ -29,6 +32,7 @@ class ServiceManagerFactory
         $serviceManager->setService('ApplicationConfig', $applicationConfig);
         $serviceManager->setService('Config', $config);
         $moduleManager = $serviceManager->get('ModuleManager');
+        assert($moduleManager instanceof ModuleManager);
         $moduleManager->loadModules();
 
         return $serviceManager;
@@ -40,7 +44,7 @@ class ServiceManagerFactory
     public static function getApplicationConfig(): array
     {
         return [
-            'modules' => [
+            'modules'                 => [
                 'Laminas\Router',
                 'TxTextControl\ReportingCloud',
             ],

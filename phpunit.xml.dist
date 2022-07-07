@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        colors="true"
-        verbose="true"
-        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
->
-    <coverage includeUncoveredFiles="false">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    bootstrap="test/bootstrap.php"
+    colors="true"
+    verbose="true"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+    <coverage processUncoveredFiles="true">
         <include>
             <directory suffix=".php">src</directory>
         </include>
-        <exclude>
-            <file>src/Console/Helper.php</file>
-        </exclude>
         <report>
             <clover outputFile="build/phpunit/clover.xml"/>
+            <html outputDirectory="build/phpunit"/>
         </report>
     </coverage>
     <testsuites>
@@ -26,9 +24,5 @@
         <ini name="date.timezone" value="UTC"/>
         <ini name="intl.default_locale" value="en_US"/>
     </php>
-    <logging>
-        <!--
-            <log type="coverage-html" target="build/phpunit"/>
-            -->
-    </logging>
+    <logging/>
 </phpunit>

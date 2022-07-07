@@ -11,8 +11,7 @@ class ReportingCloudTest extends TestCase
 {
     public function testInvocationReturnsReportingCloudInstance(): void
     {
-        $reportingCloud = new ReportingCloudReportingCloud();
-
+        $reportingCloud   = new ReportingCloudReportingCloud();
         $controllerPlugin = new ReportingCloudControllerPlugin($reportingCloud);
 
         self::assertSame($reportingCloud, $controllerPlugin());

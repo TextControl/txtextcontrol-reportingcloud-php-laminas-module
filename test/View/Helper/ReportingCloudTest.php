@@ -12,8 +12,7 @@ class ReportingCloudTest extends TestCase
     public function testInvocationReturnsReportingCloudInstance(): void
     {
         $reportingCloud = new ReportingCloudReportingCloud();
-
-        $viewHelper = new ReportingCloudViewHelper($reportingCloud);
+        $viewHelper     = new ReportingCloudViewHelper($reportingCloud);
 
         self::assertSame($reportingCloud, $viewHelper());
     }

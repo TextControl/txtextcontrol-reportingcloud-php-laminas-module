@@ -10,7 +10,7 @@
         "module"
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.0",
         "laminas/laminas-mvc": "^3.3",
         "laminas/laminas-servicemanager": "^3.12",
         "laminas/laminas-view": "^2.20",
@@ -43,20 +43,17 @@
         }
     },
     "scripts": {
-        "git-pre-commit": [
-            "@phpcbf",
-            "@phpcs"
-        ],
-        "git-pre-push": [
-            "@phpstan"
-        ],
-        "phpcbf": "php vendor/bin/phpcbf",
-        "phpcs": "php vendor/bin/phpcs",
-        "phpstan": "php vendor/bin/phpstan analyse --configuration=phpstan.neon",
+        "git-pre-commit": [],
+        "git-pre-push": [],
+        "phpcbf": "vendor/bin/phpcbf",
+        "phpcs": "vendor/bin/phpcs",
+        "phpstan": "rm -fr build/phpstan && mkdir -p build/phpstan && vendor/bin/phpstan analyse --error-format=raw | tee build/phpstan/output.txt",
+        "phpstan-baseline": "vendor/bin/phpstan analyse --generate-baseline",
         "qa": [
             "@phpcbf",
             "@phpcs",
-            "@phpstan"
+            "@phpstan",
+            "@test"
         ],
         "test": "vendor/bin/phpunit"
     }

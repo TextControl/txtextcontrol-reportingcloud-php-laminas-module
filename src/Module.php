@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @link      https://www.reporting.cloud to learn more about ReportingCloud
  * @link      https://git.io/JexF4 for the canonical source repository
  * @license   https://git.io/JexFB
- * @copyright © 2021 Text Control GmbH
+ * @copyright © 2022 Text Control GmbH
  */
 
 namespace TxTextControl\ReportingCloud;
@@ -25,12 +25,15 @@ class Module
     /**
      * Return the Laminas module configuration array
      *
-     * @return array<string, array>
+     * @return array
      */
     public function getConfig(): array
     {
         $filename = dirname(__FILE__, 2) . '/config/module.config.php';
 
-        return (array) include $filename;
+        $config = include $filename;
+        assert(is_array($config));
+
+        return $config;
     }
 }

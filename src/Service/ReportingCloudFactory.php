@@ -9,13 +9,15 @@ declare(strict_types=1);
  * @link      https://www.reporting.cloud to learn more about ReportingCloud
  * @link      https://git.io/JexF4 for the canonical source repository
  * @license   https://git.io/JexFB
- * @copyright © 2021 Text Control GmbH
+ * @copyright © 2022 Text Control GmbH
  */
 
 namespace TxTextControl\ReportingCloud\Service;
 
-use Interop\Container\ContainerInterface;
 use Laminas\ServiceManager\Factory\FactoryInterface;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\ContainerInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use TxTextControl\ReportingCloud\Exception\InvalidArgumentException;
 use TxTextControl\ReportingCloud\ReportingCloud;
 
@@ -33,15 +35,13 @@ class ReportingCloudFactory implements FactoryInterface
      * @param array|null         $options
      *
      * @return ReportingCloud
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
      */
-    // @phpstan-ignore-next-line
-    public function __invoke(
-        ContainerInterface $container,
-        $requestedName,
-        ?array $options = null
-    ): ReportingCloud {
-
+    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null): ReportingCloud
+    {
         $config = $container->get('Config');
+        assert(is_array($config));
 
         $credentials = $this->getCredentials($config);
 
