@@ -4,6 +4,7 @@
 
     <description>PSR-2</description>
 
+    <file>config</file>
     <file>src</file>
     <file>test</file>
 

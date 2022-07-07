@@ -9,6 +9,7 @@ parameters:
     bootstrapFiles:
         - vendor/autoload.php
     paths:
+        - config
         - src
         - test
     fileExtensions:
