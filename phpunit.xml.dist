@@ -17,7 +17,7 @@
         </report>
     </coverage>
     <testsuites>
-        <testsuite name="TxTextControlTest\ReportingCloud">
+        <testsuite name="textcontrol/txtextcontrol-reportingcloud-laminas-module">
             <directory>test</directory>
         </testsuite>
     </testsuites>
