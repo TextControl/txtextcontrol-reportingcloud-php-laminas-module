@@ -1,5 +1,15 @@
 ![Logo](./resource/rc_logo_512.png)
 
+
+# Abandoned Package -- Migrate Now!
+
+As of September 10, 2023, this package is no longer being maintained.
+
+Please update to the new version at [https://github.com/TextControl/textcontrol-laminas-reportingcloud](https://github.com/TextControl/textcontrol-laminas-reportingcloud).
+
+⚠️ Be sure to review the `CHANGELOG.md` of the new package.
+
+
 # ReportingCloud Laminas Module
 
 [![Build Status](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-laminas-module/badges/build.png?b=master)](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-laminas-module/build-status/master)
